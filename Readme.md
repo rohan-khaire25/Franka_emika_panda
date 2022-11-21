@@ -75,7 +75,7 @@ docker pull rohan132/franka_emika_panda
 # Clone the workspace
 git clone https://github.com/rohan-khaire25/Franka_emika_panda.git
 # Goto to docker scripts folder and start the docker container.
-./run_noetic_image.sh
+cd Franka_emika_panda/docker_scripts/ && ./run_noetic_image.sh
 ```
 5. Now you are inside the docker image. It has ROS noetic installed.
 ```bash
