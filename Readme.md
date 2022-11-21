@@ -18,7 +18,7 @@ wsl --set-default-version 2
 # Cick on "Docker Desktop for Windows" and run the installation.
 https://docs.docker.com/desktop/install/windows-install/
 
-# If you face an error "WSL instalaltion is incomplete"
+# If you face an error "WSL installation is incomplete"
 # Goto the link given in the dialog box in the error.
 # Complete step 4 and step 5.
 # Restart your PC
@@ -65,7 +65,7 @@ roslaunch franka_emika_panda franka_model.launch
 ## Ubuntu ##
 
 ## Install Docker ##
-- Follow the "Install using the repository" appraoch to install docker using the link below.
+- Follow the "Install using the repository" approach to install docker using the link below.
 - Install the [Docker](https://docs.docker.com/engine/install/ubuntu/) for Ubuntu.
 
 # Run ROS package #
