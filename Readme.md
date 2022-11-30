@@ -87,7 +87,22 @@ cd home/catkin_ws/ && source devel/setup.bash
 # Launch the ROS node
 roslaunch franka_emika_panda franka_model.launch
 ```
+## Dependency ##
 
+- Install **ros_control** packages
+```bash
+sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers
+```
+
+- Install gazebo_ros and control package
+```bash
+sudo apt-get install ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control
+```
+
+- Install Peter Corke's rtb toolbox
+```bash
+pip3 install roboticstoolbox-python
+```
 
 
 
