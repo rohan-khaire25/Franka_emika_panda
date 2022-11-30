@@ -10,6 +10,8 @@ project(franka_emika_panda)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
+  robot_state_publisher
+  joint_state_publisher
 )
 
 ## System dependencies are found with CMake's conventions

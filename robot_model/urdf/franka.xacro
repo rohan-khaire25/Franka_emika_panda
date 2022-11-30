@@ -1,16 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
 
-  <!-- =============================================================== -->
-  <!-- || This file does not contain official inertial properties   || -->
-  <!-- || of panda robot. The values are from the identification    || -->
-  <!-- || results published in: Identification of the Franka Emika  || -->
-  <!-- || PandaRobot With Retrieval of Feasible Parameters Using    || -->
-  <!-- || Penalty-Based Optimization                                || -->
-  <!-- || by: Claudio Gaz, Marco Cognetti, Alexander Oliva,         || -->
-  <!-- || Paolo Robuffo Giordano, Alessandro de Lucaa               || -->
-  <!-- =============================================================== -->
-
   <xacro:macro name="panda_arm" params="arm_id:='panda'">
     <link name="${arm_id}_link0">
       <visual>
@@ -346,7 +336,6 @@
     </link>
 
     <!-- Friction specific material for Rubber/Rubber contact -->
-    <!-- See: -->
     <xacro:gazebo-friction link="${ns}_leftfinger" mu="1.13" />
     <xacro:gazebo-friction link="${ns}_rightfinger" mu="1.13" />
 

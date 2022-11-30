@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
 
-  <xacro:arg name="arm_id" default="panda" /> <!-- Name of this panda -->
-  <xacro:arg name="hand"   default="false" /> <!-- Should a franka_gripper be mounted at the flange?" -->
-  <xacro:arg name="gazebo" default="false" /> <!-- Is the robot being simulated in gazebo?" -->
+  <xacro:arg name="arm_id" default="panda" /> <!-- Name of this robot -->
+  <xacro:arg name="hand"   default="false" /> <!-- Adds end-effector to the robot -->
+  <xacro:arg name="gazebo" default="false" /> <!-- Generates model for simulation in Gazebo -->
 
   <xacro:property name="arm_id" value="$(arg arm_id)" />
 
@@ -41,19 +41,12 @@
     <xacro:gazebo-joint joint="${arm_id}_joint6" transmission="hardware_interface/PositionJointInterface" />
     <xacro:gazebo-joint joint="${arm_id}_joint7" transmission="hardware_interface/PositionJointInterface" />
 
-    <!-- <xacro:transmission-franka-state arm_id="${arm_id}" />
-    <xacro:transmission-franka-model arm_id="${arm_id}"
-       root="${arm_id}_joint1"
-       tip="${arm_id}_joint8"
-     /> -->
-
     <gazebo>
       <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
         <robotNamespace>${arm_id}</robotNamespace>
         <controlPeriod>0.001</controlPeriod>
-        <!-- <robotSimType>franka_gazebo/FrankaHWSim</robotSimType> -->
       </plugin>
-      <self_collide>true</self_collide>
+      <self_collide>false</self_collide>
     </gazebo>
   </xacro:if>
 

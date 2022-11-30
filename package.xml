@@ -2,13 +2,13 @@
 <package format="2">
   <name>franka_emika_panda</name>
   <version>0.0.0</version>
-  <description>The franka_emika_panda package</description>
+  <description>The franka_emika_panda package for forward and inverse kinematics</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="root@todo.todo">root</maintainer>
-
+  <maintainer email="rohan_khaire@gmail.com">Rohan Khaire</maintainer>
+  <maintainer email="hgpt15@gmail.com">Harsh Gangwar</maintainer>
 
   <!-- One license tag required, multiple allowed, one license per tag -->
   <!-- Commonly used license strings: -->
@@ -55,8 +55,10 @@
   <build_export_depend>rospy</build_export_depend>
   <exec_depend>roscpp</exec_depend>
   <exec_depend>rospy</exec_depend>
-
-
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>ros_control</exec_depend>
+  <exec_depend>ros_controllers</exec_depend>
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- Other tools can request additional information be placed here -->
